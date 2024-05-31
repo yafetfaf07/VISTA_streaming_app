@@ -16,6 +16,7 @@ const VideoDetails = () => {
       <div className="video-detail-wrapper">
         <Sidebar />
         <main>
+        <div className="left">
           <div className="thumbnail-wrapper">
             <video
               src={randomVideo}
@@ -26,7 +27,7 @@ const VideoDetails = () => {
 
             <h2 className="video-details-title">{title}</h2>
           </div>
-
+         
           <div className="channel-descriptions">
             <div className="first-div">
               <div>
@@ -59,6 +60,41 @@ const VideoDetails = () => {
               <span>Save</span>
             </div>
           </div>
+            
+            </div>
+        <div className="right">
+          <h3>Other Videos</h3>
+          <div className="recommended-videos">
+            <div className="image-wrapper">
+              <img src={thumbnailpic} alt=" " />
+            </div>
+            <div>
+              <div className="channel-detail">
+                <img src={thumbnailpic} alt="" className="channel-logo-recommended" />
+                <span>Channel's name</span>
+                <span>4 days ago</span>
+                <div>
+                  <span>Video's name</span>
+                </div>
+                <div>
+                  <span>14K views</span>
+                  <span>10 comments</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div></div>
+
+          <div></div>
+
+          <div></div>
+
+          <div></div>
+
+        </div>
+          
+
         </main>
         {/* <span style={{ color: "yellow", fontSize: "5rem" }}>{thumbnail}</span> */}
       </div>
