@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color:#080a1a;
+    background-position: center;
+}
+
+.sign-in-form {
+    backdrop-filter: blur(0px) saturate(107%);
+    -webkit-backdrop-filter: blur(0px) saturate(107%);
+    background-color: rgba(17, 25, 40, 0.23);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    width: 500px;
+    margin: 0 auto;
+    transform: translateY(90px);
+}
+.wrapper {
+
+    /* width: 500px; */
+    border-radius: 10px;
+    width: 500px;
+    margin: 0 auto;
+}
+.accounts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left {
+visibility: visible;
+}
+.right {
+    transform: translateX(0px);   
+    transition: 500ms; 
+}
+
+.logo {
+display: flex;
+justify-content: center;
+align-items: center;
+transform: translate(0%, 80%);
+
+}
+.logo img {
+    width: 80px;
+    /* margin-bottom: -80px; */
+}
+
+.sign-in-form h2 {
+text-align: center;
+margin-bottom:20px;
+color: white;
+}
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.icons {
+    color:#9b9a9c;
+    align-items: center;
+    display: flex;
+}
+.icons span {
+    transform: translateX(50px);
+}
+.icons input {
+    border: 1px solid gray;
+    margin: 15px;
+    height: 50px;
+    padding-left: 50px;
+    width: 300px;
+    border-radius: 6px;
+    outline: none;
+    background-color: #080a1a7c;
+    color: gray;
+}
+.inputs input::placeholder {
+    font-weight: 700;
+    
+}
+.signup-btn {
+    background-color:rgb(206, 0, 0);
+    color:white;
+    border:none;
+    width:300px;
+    height: 50px;
+    border-radius:7px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 15px;
+    transition: 500ms;
+    cursor: pointer;
+}
+.signup-btn:hover {
+    transform: translateY(-6px);
+}
+/* .checkBoxDiv {
+display: flex;
+align-items: center;
+}
+.checkboxs {
+    border: 1px solid red;
+}
+  
+#remeberMe {
+    color:black;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-bottom: 20px; 
+} */
+
+.oauth {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.oauth img {
+    width: 60px;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    font-weight: 600;
+    color: gray;
+    margin-top: 10px;
+}
+.signinred {
+    color:#c1232f;
+}

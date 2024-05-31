@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.logos h2 {
+    color: white;
+}
+.search input {
+  height: 40px;
+  width: 450px;
+  border: none;
+  background-color:#1f2e3c;
+  padding-left: 30px;
+  border-radius: 7px;
+  color: white;
+  outline: none;
+}
+.search input::placeholder {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+}
+.interaction {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+.interaction * {
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  background-color:#000312;
+  border: none;
+}
+.sign-in {
+  background-color: #1a2a37;
+    border-radius: 20px;
+    width: 100px;
+    cursor: pointer;
+
+}
+.left-scroller, .right-scroller {
+  border: none;
+  color: white;
+}
+.left-scroller span, .right-scroller span {
+  padding: 10px;
+  border-radius: 100%;
+  background-color: #1a2a37;
+
+}
+.sign-up {
+    border: 2px solid #78b33d;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.scroll-menu {
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+}
+.scroll-menu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  background-color: #1f2e3c;
+  margin: 5px;
+  border-radius: 15px;
+  font-size: 0.89rem;
+}
+.side-bar {
+  display: flex;
+  flex-direction: column;   
+  color: white;
+  background-color: #1a2a37;
+  padding: 20px;
+  /* background-color: #1a2a37; */
+  border-radius: 10px;
+  align-items: center;
+  height: 100vh;
+  margin-right: 50px;
+  position: sticky;
+  top:0;
+  left: 0;
+  justify-content: space-between;
+  width:100px;
+}
+.side-bar div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  background-color: #1a2a37;
+}
+
+.side-bar div span {
+  background-color: #1a2a37;
+  cursor: pointer;
+
+}
+
+
+
+
+
+
