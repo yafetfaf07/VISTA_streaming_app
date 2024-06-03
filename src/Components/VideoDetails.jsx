@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import "../CSS_files/video-details.css";
 import thumbnailpic from "../assets/images/backgroundImage.webp";
 import randomVideo from "../assets/videos/API.mp4";
+import RecommendedVideos from "./RecommendedVideos";
 const VideoDetails = () => {
   const { title } = useContext(UserContext);
   const { thumbnail } = useContext(UserContext);
@@ -25,9 +26,9 @@ const VideoDetails = () => {
               className="video-thumbnail"
             ></video>
 
-            <h2 className="video-details-title">{title}</h2>
           </div>
-         
+          <h2 className="video-details-title">{title}</h2>
+
           <div className="channel-descriptions">
             <div className="first-div">
               <div>
@@ -60,37 +61,19 @@ const VideoDetails = () => {
               <span>Save</span>
             </div>
           </div>
+
+          
             
             </div>
         <div className="right">
-          <h3>Other Videos</h3>
-          <div className="recommended-videos">
-            <div className="image-wrapper">
-              <img src={thumbnailpic} alt=" " />
-            </div>
-            <div>
-              <div className="channel-detail">
-                <img src={thumbnailpic} alt="" className="channel-logo-recommended" />
-                <span>Channel's name</span>
-                <span>4 days ago</span>
-                <div>
-                  <span>Video's name</span>
-                </div>
-                <div>
-                  <span>14K views</span>
-                  <span>10 comments</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div></div>
-
-          <div></div>
-
-          <div></div>
-
-          <div></div>
+        <RecommendedVideos />
+        <RecommendedVideos />
+        <RecommendedVideos />
+        <RecommendedVideos />
+        <RecommendedVideos />
+        <RecommendedVideos />
+        <RecommendedVideos />
+        <RecommendedVideos />
 
         </div>
           
