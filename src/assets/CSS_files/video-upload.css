@@ -5,23 +5,41 @@
 
 .upload-btn {
   border: none;
-  background-color: #78b33d;
-  color: white;
-  border-radius: 8px;
-  padding: 4px;
+  background-color: lightblue;
+  color: black;
+  width: 150px;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  transform: translateY(5px);
+  transition: 500ms;
+  border-radius: 3px;
 }
 
-.video-form input {
-  background-color: white;
+.upload-btn:hover {
+  border-radius: 16px;
+  cursor: pointer;
+  transform: translateY(2px);
+}
+
+.video-form input, .video-form textarea{
   display: block;
+  /* border: 1px solid red; */
+  background-color: #04081f;
   border: none;
-  background-color: #040a29;
   color: white;
   outline: none;
+  border-radius: 5px;
+  height: 80px;
 }
-.video-form textarea,
-.video-form select {
-  background-color: #040a29;
+
+
+.video-form select, .video-form span {
+  background-color: #08134d;
+
   border: none;
   color: white;
   outline: none;
@@ -29,20 +47,26 @@
 }
 
 .video-form * {
-  padding: 8px;
-  margin: 10px;
+  padding: 2px;
+
 }
 .video-form {
   display: flex;
   flex-direction: column;
   width: 400px;
   margin: 0 auto;
-  border: 1px solid gray;
-  /* border-radius: 10px; */
+  height: 100vh;
+  background-color: #08134d;
+  border-radius: 10px;
+  gap:20px;
+  padding: 5px;
 }
 .video-form h3 {
   color: white;
   font-size: 1.7rem;
+  background-color: #08134d;
+  border-radius: 10px;
+
 }
 .video-form span {
   color: white;
@@ -51,16 +75,24 @@
 /* video-sidebar*/
 
 #video-sidebar {
-  width: 400px;
+  width: 280px;
   color: white;
-  height: 200px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-}
-#video-sidebar div {
+  /* background-color: #0b1b6b; */
+  border-right: 1px solid gray;
+  border-top: 1px solid gray;
   padding: 10px;
-  width: 300px;
-  border-radius: 20px;
+}
+#video-sidebar .sides {
+  padding: 10px;
+  width: 100%;
+  /* background-color: #0b1b6b; */
+  border-bottom: 1px solid gray;
+  transition: 500ms;
+
+
 }
 
 .video-uploaded div {
@@ -69,17 +101,29 @@
 
 #video-sidebar .sides:hover {
     background-color: lightblue;
-    color: black;
-    transition: 500ms;
     cursor: pointer;
+    border-radius: 8px;
+    color: black;
+    font-weight: 600;
+
 }
 
 .side-bar-channel-logo {
-    width:50px;
-    height: 50px;
+    width:80px;
+    height: 80px;
     border-radius:100%; 
+    object-fit: cover;
 }
 .channels-logo{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 80px 0px;
+    /* background-color: #0b1b6b; */
+
 }
+.channels-logo h2 {
+  /* background-color: #0b1b6b; */
+padding-top: 50px;
+}
+
