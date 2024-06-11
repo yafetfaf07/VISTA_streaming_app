@@ -1,18 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 import UserContext from "../context/UserContext";
 import Sidebar from "./Sidebar";
 import NavBar from "./NavBar";
-import "../CSS_files/video-details.css";
+import "../assets/CSS_files/video-details.css";
 import thumbnailpic from "../assets/images/backgroundImage.webp";
-import randomVideo from "../assets/videos/API.mp4";
+import randomVideo from "../assets/videos/API.mp4"
 import RecommendedVideos from "./RecommendedVideos";
 const VideoDetails = () => {
   const { title } = useContext(UserContext);
   const { thumbnail } = useContext(UserContext);
+  const videoRef = useRef(null);
+  const [duration, setduration] = useState(null);
   console.log(title);
   console.log(thumbnail);
+
+  const onloadedData = () => {
+    setduration(videoRef.current.duration);
+    console.table("Duration",formatDuration(duration));
+    console.log(videoRef)
+    
+  }
+
+  function formatDuration(duration) {
+    const hours = Math.floor(duration / 3600);
+    const minutes = Math.floor((duration % 3600) / 60);
+    const seconds = Math.floor(duration % 60);
+  
+    let formattedTime = "";
+    if (hours > 0) {
+      formattedTime += hours + ":";
+    }
+    formattedTime += minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0");
+    return formattedTime;
+  }
+
+  
+
   return (
     <div>
+
       <NavBar />
       <div className="video-detail-wrapper">
         <Sidebar />
@@ -24,10 +50,16 @@ const VideoDetails = () => {
               controls
               poster={thumbnailpic}
               className="video-thumbnail"
+              ref={videoRef}
+              // onLoadedMetadata={() => {
+              //   onloadedData();
+              // }}
             ></video>
 
           </div>
-          <h2 className="video-details-title">{title}</h2>
+          <h2 onClick={() => {
+            onloadedData();
+          }} className="video-details-title">{title}</h2>
 
           <div className="channel-descriptions">
             <div className="first-div">

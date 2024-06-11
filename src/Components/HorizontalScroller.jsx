@@ -1,5 +1,5 @@
 import React from "react";
-import "../CSS_files/movie-main.css";
+import "../assets/CSS_files/movie-main.css"
 
 const HorizontalScroller = () => {
   return (

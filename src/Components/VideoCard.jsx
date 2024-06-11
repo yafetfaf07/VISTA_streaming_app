@@ -1,14 +1,14 @@
 import React, {useContext}from 'react'
 import UserContext from '../context/UserContext';
 import thumbnail from "../assets/images/backgroundImage.webp";
-import "../CSS_files/video-card.css"
+import "../assets/CSS_files/video-card.css"
 import { Navigate, useNavigate } from 'react-router-dom';
-const VideoCard = () => {
+const VideoCard = (props) => {
   const {settitle} = useContext(UserContext)
   const {setthumbnail} = useContext(UserContext);
   const navigate = useNavigate();
   return (
-    <div className='video-card' onClick={() => {
+    <div className='video-card'  onClick={() => {
       let datatoPass = {
         title:settitle("Halo Season 2 Trailer"),
         thumbnailPic:setthumbnail("This is my thumbnail")
@@ -24,7 +24,7 @@ const VideoCard = () => {
           <span>32:45</span>
         </div>
       </div>
-      <h4 className='video-title'>HALO season 2: Trailer </h4>
+      <h4 className='video-title'>Halo Season 2 TRAILER!!</h4>
       <div className='profile'>
         <div className='profile-pic'>
         <img className='channel-pic' src={thumbnail} />
@@ -37,6 +37,8 @@ const VideoCard = () => {
     </div>
   )
 }
+
+
 
 export default VideoCard
 

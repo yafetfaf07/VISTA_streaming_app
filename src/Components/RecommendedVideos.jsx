@@ -1,6 +1,6 @@
 import React from 'react'
 import pics from "../assets/images/backgroundImage.webp"
-import "../CSS_files/video-details.css"
+import "../assets/CSS_files/video-details.css"
 
 const RecommendedVideos = () => {
   return (
