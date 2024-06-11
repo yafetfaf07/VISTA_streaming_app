@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import "../CSS_files/movie-main.css";
+import "../assets/CSS_files/movie-main.css"
 import NavBar from "../Components/NavBar";
 import HorizontalScroller from "../Components/HorizontalScroller";
 import VideoWrapper from "../Components/VideoWrapper";
