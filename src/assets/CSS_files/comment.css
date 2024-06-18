@@ -1,0 +1,9 @@
+.comment-section-wrapper {
+    margin-top: 24px;
+color:white;
+}
+
+.total-comments {
+    display: inline;
+    padding-right: 8px;
+}
