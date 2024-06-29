@@ -1,29 +1,46 @@
 import React, { useEffect, useState } from "react";
 import VideoCard from "./VideoCard";
-import '../assets/CSS_files/video-card.css'
+import "../assets/CSS_files/video-card.css";
+import { Spin } from "antd";
 const VideoWrapper = () => {
   const [video, setvideo] = useState([]);
+  const [isLoading, setisLoading] = useState(false);
 
-  useEffect( () => {
-    const fetchVideo = async () => {
-      const response = await fetch("http://localhost:5036/api/User");  
-      const videos = await response.json();
-      // console.log(videos);
+  useEffect(() => {
+    setisLoading(true);
 
-      setvideo(videos);
-    }
+    //  console.log("Not seted",videos);
+    setTimeout(async () => {
+      setisLoading(false);
+    }, 2000);
+  }, []);
 
-    fetchVideo();
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          
+        }}
+      >
+        <Spin
+          style={{
+          transform:"translate(500px, 200px)"
+          }}
+          spinning={true}
+          size="large"
+        ></Spin>
+      </div>
+    );
+  }
 
-    console.log("This is the data",video);
 
-  }, [])
   return (
     <div className="categories">
       <h2>Gaming</h2>
       <div className="gaming">
-     
-        <VideoCard  />
+        <VideoCard />
         <VideoCard />
         <VideoCard />
         <VideoCard />
@@ -44,9 +61,6 @@ const VideoWrapper = () => {
       </div>
     </div>
   );
-
-
 };
-
 
 export default VideoWrapper;
