@@ -9,24 +9,6 @@ const VideoUploadPage = () => {
   const [isDashboard, setisDashboard] = useState(true);
   const [isUpload, setisUpload] = useState(false);
   const [isEdit, setisEdit] = useState(false);
-  function setFileInfo() {
-    //change div content
-    //var file = document.getElementById("fileUp").files[0];
-
-    //var Pname = file.name;
-   // Pname = Pname.slice(0, Pname.indexOf(".")); //get filename without extension
-    // var Ptype = file.type;
-    //turns into KB,MB, etc...
-    //returns 1, 2 or 3
-    // var Pdur = file.duration;
-    //returns size * (100 || 10 || 1)
-    /* a lot of stuff throwing this info to the HTML */
-    // console.log(Pname);
-    // console.log(Ptype);
-
-    // console.log(Pdur)
-  }
-
   if (isDashboard) {
     return (
       <div className="video-uploaded">
@@ -38,25 +20,26 @@ const VideoUploadPage = () => {
 
           <VideoDashboard  />
 
-          <div style={{ width: "300px" }}></div>
         </div>
       </div>
     );
-  } else if (isEdit) {
-    return (
-      <div className="video-uploaded">
-        <NavBar />
-        {/* <h2 className="video-upload-header">Channel Content</h2> */}
+  } 
+  // else if (isEdit) {
+  //   return (
+  //     <div className="video-uploaded">
+  //       <NavBar />
+  //       {/* <h2 className="video-upload-header">Channel Content</h2> */}
      
 
-        <div>
-        <VideoSideBar isDashboards = {setisDashboard} isUploads = {setisUpload} isEdits = {setisEdit} />
-        <VideoEdit   />
-          <div style={{ width: "300px" }}></div>
-        </div>
-      </div>
-    );
-  } else if (isUpload) {
+  //       <div>
+  //       <VideoSideBar isDashboards = {setisDashboard} isUploads = {setisUpload} isEdits = {setisEdit} />
+  //       <VideoEdit   />
+  //         <div style={{ width: "300px" }}></div>
+  //       </div>
+  //     </div>
+  //   );
+  // } 
+  else if (isUpload) {
     return (
       <div className="video-uploaded">
         <NavBar />
@@ -70,20 +53,7 @@ const VideoUploadPage = () => {
       </div>
     );
   }
-  // return (
-  //   <div className="video-uploaded">
-  //     <NavBar />
-  //           {/* <h2 className="video-upload-header">Channel Content</h2> */}
 
-  //     <div>
-  //     <VideoSideBar />
-  //     <UploadVideos />
-  //     <VideoDashboard />
-  //     <div style={{width:"300px"}}></div>
-  //     </div>
-
-  //   </div>
-  // );
 };
 
 export default VideoUploadPage;
