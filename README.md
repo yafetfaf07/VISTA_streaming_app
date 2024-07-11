@@ -1,5 +1,5 @@
 # VISTA_streaming_app
-A video streaming app design using the react library. 
+A video streaming app designed using the react library. 
 
 Features included
 
